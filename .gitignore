@@ -1,0 +1,5 @@
+/nginx/logs/
+
+/nuclei-logs/
+
+*.log
