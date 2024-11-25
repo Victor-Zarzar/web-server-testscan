@@ -1,5 +1,28 @@
+# Nginx
 /nginx/logs/
 
 /nuclei-logs/
 
 *.log
+
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.swp
+*.swo
+*.~ 
+
+# Django
+*.log
+*.pot
+db.sqlite3
+media/
+staticfiles/
+
+# Environments
+.env
+venv/
+ENV/
+env/

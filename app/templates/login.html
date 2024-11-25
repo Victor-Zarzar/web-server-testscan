@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Login
+{% endblock %}
+
+{% block content %}
+  <div class="min-h-screen">
+    <form class="max-w-md mx-auto mt-4 p-4 bg-white rounded shadow rounded-lg mt-40">
+      <h1 class="text-4xl font-bold text-center">Login</h1>
+      <label class="block mb-2">
+        <span class="text-gray-700">Usuário</span>
+        <input type="text" id="username" class="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-800 
+        transition-all duration-300" placeholder="Usuário" required />
+        <p class="text-red-500 text-sm mt-2 hidden" id="usernameError">Username is required.</p>
+      </label>
+      <label class="block mb-2">
+        <span class="text-gray-700">Senha</span>
+        <input type="password" id="password" class="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-800 
+        transition-all duration-300" placeholder="Senha" required />
+        <p class="text-red-500 text-sm mt-2 hidden" id="passwordError">Password is required.</p>
+      </label>
+      <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded mt-4 hover:bg-blue-700">Entrar</button>
+      <a href="/register" class="w-full block bg-blue-500 text-white py-2 rounded mt-4 text-center hover:bg-blue-700">Registrar</a>
+    </form>
+  </div>
+{% endblock %}

@@ -1,10 +1,9 @@
-from flask import Flask
+from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
+from app.routes import router 
 
-app = Flask(__name__)
+app = FastAPI()
 
-@app.route("/")
-def hello():
-    return "Teste nuclei scanner com web server flask e nginx..."
+app.mount("/static", StaticFiles(directory="app/static"), name="static")
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+app.include_router(router)

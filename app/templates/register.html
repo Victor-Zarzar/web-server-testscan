@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Registro
+{% endblock %}
+
+{% block content %}
+  <div class="min-h-screen">
+    <form class="max-w-md mx-auto mt-4 p-4 bg-white rounded shadow rounded-lg mt-40">
+      <h1 class="text-4xl font-bold text-center">Registro</h1>
+      <label class="block mb-2">
+        <span class="text-gray-700">Usuário</span>
+        <input type="text" id="username" class="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-800 
+        transition-all duration-300" placeholder="Usuário" required />
+        <p class="text-red-500 text-sm mt-2 hidden" id="usernameError">Username is required.</p>
+      </label>
+      <label class="block mb-2">
+        <span class="text-gray-700">Email</span>
+        <input type="email" id="email" class="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-800 
+        transition-all duration-300" placeholder="Email" required />
+        <p class="text-red-500 text-sm mt-2 hidden" id="passwordError">Email is required.</p>
+      </label>
+      <label class="block mb-2">
+        <span class="text-gray-700">Senha</span>
+        <input type="password" id="password" class="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-800 
+        transition-all duration-300" placeholder="Senha" required />
+        <p class="text-red-500 text-sm mt-2 hidden" id="passwordError">Password is required.</p>
+      </label>
+      <label class="block mb-2">
+        <span class="text-gray-700">Confirmar Senha</span>
+        <input type="password" id="confirm-password" class="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-800
+         transition-all duration-300" placeholder="Confirmar Senha" required />
+        <p class="text-red-500 text-sm mt-2 hidden" id="passwordError">Confirm Password.</p>
+      </label>
+      <button type="submit" class="w-full bg-blue-500 text-white py-2 rounded mt-4 hover:bg-blue-700">Registrar</button>
+      <a href="/login" class="w-full block bg-blue-500 text-white py-2 rounded mt-4 text-center hover:bg-blue-700">Voltar Login</a>
+    </form>
+  </div>
+{% endblock %}
